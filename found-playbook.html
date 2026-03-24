@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Playbook • PS HOW Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&family=Roboto+Mono:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="interior-page">
+
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#E90130"/>
+                    <path d="M12 28L20 12L28 28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="label logo-text">Playbook</span>
+            </a>
+            <div class="profile-wrapper">
+                <span class="label profile-name">John Doe</span>
+                <div class="profile-icon"><span>JD</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <h1 class="h1">Found. Playbook</h1>
+            <p class="body-text">Core principles, architectures, and guidelines designed to scale intelligently.</p>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs-container">
+            <nav class="primary-tabs">
+                <button class="tab-btn active" data-tab="summary">Summary</button>
+                <button class="tab-btn" data-tab="working">Working</button>
+                <button class="tab-btn" data-tab="style">Style</button>
+                <button class="tab-btn" data-tab="ways">Ways</button>
+                <button class="tab-btn" data-tab="flow">Flow</button>
+                <button class="tab-btn" data-tab="code">Code</button>
+                <button class="tab-btn" data-tab="guide">Guide</button>
+            </nav>
+            
+            <nav class="secondary-tabs" style="display: none;">
+                <button class="sub-tab-btn active" data-subtab="overview">Overview</button>
+                <button class="sub-tab-btn" data-subtab="process">Process</button>
+            </nav>
+        </div>
+
+        <div id="overview-wrapper">
+            <!-- SUMMARY TAB -->
+            <div id="content-summary" class="tab-pane split-layout" style="display: flex;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#sum-working" class="scroll-link active">Working (Ideation)</a></li>
+                        <li><a href="#sum-style" class="scroll-link">Style (Design)</a></li>
+                        <li><a href="#sum-ways" class="scroll-link">Ways (Agile)</a></li>
+                        <li><a href="#sum-flow" class="scroll-link">Flow (Architecture)</a></li>
+                        <li><a href="#sum-code" class="scroll-link">Code (Development)</a></li>
+                        <li><a href="#sum-guide" class="scroll-link">Guide (Handover)</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="sum-working" class="content-section">
+                        <h2 class="h2">Working (Ideation & Requirements)</h2>
+                        <p class="body-text">The foundation of every strong IT product starts with clear ideation and solid requirements. In the Working phase, we define the product scope, gather stakeholder constraints, and establish the functional goals that form the vision of the application.</p>
+                        <br><br><br><br>
+                    </section>
+                    <section id="sum-style" class="content-section">
+                        <h2 class="h2">Style (UI/UX Design)</h2>
+                        <p class="body-text">Design is how it works, not just how it looks. The Style phase translates the requirements into wireframes, high-fidelity mockups, and interactive prototypes. We establish the design system tokens, ensuring a premium aesthetics loop that delights users.</p>
+                        <br><br><br><br>
+                    </section>
+                    <section id="sum-ways" class="content-section">
+                        <h2 class="h2">Ways (Agile Methodology)</h2>
+                        <p class="body-text">With the plan and design established, we utilize modern Agile ways of working. This methodology breaks down the product development into bi-weekly sprints, ensuring rapid iterations, constant feedback, and high team velocity.</p>
+                        <br><br><br><br>
+                    </section>
+                    <section id="sum-flow" class="content-section">
+                        <h2 class="h2">Flow (System Architecture)</h2>
+                        <p class="body-text">The Flow phase defines the engineering backbone. We architect cloud-native solutions, map out the data structures, orchestrate microservices, and ensure the pipeline CI/CD is robust enough to handle the incoming code efficiently.</p>
+                        <br><br><br><br>
+                    </section>
+                    <section id="sum-code" class="content-section">
+                        <h2 class="h2">Code (Development)</h2>
+                        <p class="body-text">This is where the product comes to life. Our software engineers translate architecture and design into clean, maintainable, and scalable code. Front-end and back-end work sequentially to build the functional MVP.</p>
+                        <br><br><br><br>
+                    </section>
+                    <section id="sum-guide" class="content-section">
+                        <h2 class="h2">Guide (Documentation & Handover)</h2>
+                        <p class="body-text">A product is only as good as its documentation. In the Guide phase, we formalize the user manuals, API documentation, and technical handover processes safely, ensuring smooth deployments and easy onboarding.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- WORKING TAB -->
+            <div id="content-working" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#work-def" class="scroll-link active">What is Working?</a></li>
+                        <li><a href="#work-how" class="scroll-link">How we work</a></li>
+                        <li><a href="#work-setup" class="scroll-link">Environment Setup</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="work-def" class="content-section">
+                        <h2 class="h2">What is Working?</h2>
+                        <p class="body-text">The Working Definition involves explicitly outlining what constitutes a successful sprint. It defines the 'Definition of Done', outlining that all features must be tested, documented, and approved before merge.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="work-how" class="content-section">
+                        <h2 class="h2">How we work</h2>
+                        <img src="images/working_ideation.png" alt="Working Ideation" style="width:100%; max-width:800px; border-radius:16px; margin-bottom:32px; box-shadow: 0 12px 32px var(--color-shadow);">
+                        <p class="body-text">We strictly utilize asynchronous communication for general updates, while reserving synchronous meetings for complex problem-solving. This ensures that every individual can experience deep work without facing persistent interruptions. Every piece of work must be tracked transparently on our Agile boards, which serve as the single source of truth for all ongoing developments.</p>
+                        <br><br>
+                        <p class="body-text">Brainstorming sessions are conducted using digital whiteboards, prioritizing visual thinking over endless text. Ideas are clustered, prioritized by business value, and immediately translated into actionable tickets with explicit acceptance criteria.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="work-setup" class="content-section">
+                        <h2 class="h2">Environment Setup</h2>
+                        <p class="body-text">Before starting any code, establishing your local dev environment via Docker and linking your ticketing platform is mandatory. Follow the central Wiki for exact command steps.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- STYLE TAB -->
+            <div id="content-style" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#style-def" class="scroll-link active">Style Definition</a></li>
+                        <li><a href="#style-create" class="scroll-link">Creating our Style</a></li>
+                        <li><a href="#style-tokens" class="scroll-link">Design Tokens</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="style-def" class="content-section">
+                        <h2 class="h2">Style Definition</h2>
+                        <p class="body-text">Our style embraces minimalism, high contrast, and dynamic micro-animations. We prioritize readability with Lexend Deca and Roboto fonts, coupled with our Radiant Red accent color.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="style-create" class="content-section">
+                        <h2 class="h2">Creating our Style</h2>
+                        <img src="images/style_design.png" alt="Design System Interface" style="width:100%; max-width:800px; border-radius:16px; margin-bottom:32px; box-shadow: 0 12px 32px var(--color-shadow);">
+                        <p class="body-text">UI Kits are maintained centrally on Figma. Any new component must first be proposed as a variant in our generic library and reviewed by the lead designer before coding begins. We treat our UI kit as a product itself, version-controlling every structural change.</p>
+                        <br><br>
+                        <p class="body-text">Designers work hand-in-hand with front-end engineers to ensure perfectly feasible implementation. We avoid custom CSS wherever possible, relying strictly on our pre-defined modular component pieces, which guarantees absolute visual consistency across the entire portfolio of products.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="style-tokens" class="content-section">
+                        <h2 class="h2">Design Tokens</h2>
+                        <p class="body-text">All colors, spacing, and typography scales are exported as raw JSON tokens from Figma, which are then converted directly into CSS variables inside our global styles.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- WAYS TAB -->
+            <div id="content-ways" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#ways-agile" class="scroll-link active">Agile Framework</a></li>
+                        <li><a href="#ways-sprint" class="scroll-link">Sprint Planning</a></li>
+                        <li><a href="#ways-retro" class="scroll-link">Retrospectives</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="ways-agile" class="content-section">
+                        <h2 class="h2">Agile Framework</h2>
+                        <p class="body-text">We strictly follow an adapted Scrum framework. Deliverables are sliced into the smallest viable functional chunks to avoid massive delayed pull requests.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="ways-sprint" class="content-section">
+                        <h2 class="h2">Sprint Planning</h2>
+                        <p class="body-text">Sprints run on 2-week cycles. Plannings occur on Monday mornings where story points are assigned collectively via asynchronous planning poker.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="ways-retro" class="content-section">
+                        <h2 class="h2">Retrospectives</h2>
+                        <p class="body-text">The most crucial meeting of the sprint. We honestly evaluate what went well and what bottlenecks occurred, aiming to incrementally improve velocity.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- FLOW TAB -->
+            <div id="content-flow" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#flow-arch" class="scroll-link active">Architecture Diagrams</a></li>
+                        <li><a href="#flow-micro" class="scroll-link">Microservices</a></li>
+                        <li><a href="#flow-cicd" class="scroll-link">CI/CD Flow</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="flow-arch" class="content-section">
+                        <h2 class="h2">Architecture Diagrams</h2>
+                        <img src="images/flow_architecture.png" alt="Architecture Flow" style="width:100%; max-width:800px; border-radius:16px; margin-bottom:32px; box-shadow: 0 12px 32px var(--color-shadow);">
+                        <p class="body-text">Before a single line of code is written, a C4 Model diagram must be approved representing the Context, Container, and Component levels. This abstract map ensures that all microservices scale efficiently and decoupled from immediate failure zones.</p>
+                        <br><br>
+                        <p class="body-text">We utilize glowing-red highlight notations in our specs to designate critical high-traffic nodes. Data flows must strictly follow unidirectional patterns, heavily caching static endpoints via Edge CDNs to maintain ultra-fast global latency.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="flow-micro" class="content-section">
+                        <h2 class="h2">Microservices</h2>
+                        <p class="body-text">Applications are broken down into domain-driven microservices. Each service owns its database and communicates strictly via versioned GraphQL or REST APIs.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="flow-cicd" class="content-section">
+                        <h2 class="h2">CI/CD Flow</h2>
+                        <p class="body-text">Code pushed to main triggers automated testing, building, and deployment to the staging environment. Production toggles require manual sign-off.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CODE TAB -->
+            <div id="content-code" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#code-standards" class="scroll-link active">Linting & Standards</a></li>
+                        <li><a href="#code-patterns" class="scroll-link">Design Patterns</a></li>
+                        <li><a href="#code-review" class="scroll-link">Review Protocol</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="code-standards" class="content-section">
+                        <h2 class="h2">Linting & Standards</h2>
+                        <img src="images/code_development.png" alt="Code Development" style="width:100%; max-width:800px; border-radius:16px; margin-bottom:32px; box-shadow: 0 12px 32px var(--color-shadow);">
+                        <p class="body-text">All repositories incorporate Prettier and strict ESLint rules on pre-commit hooks. Code that fails static analysis simply cannot be committed. Our automated pipelines block any merge requests that drop test coverage below the 90% threshold.</p>
+                        <br><br>
+                        <p class="body-text">For modern frontend workflows, we enforce heavily typed TypeScript objects and functional components. Floating terminal instances within IDEs are configured locally to immediately ping the CI servers, allowing developers to see build-status overlays in real time.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="code-patterns" class="content-section">
+                        <h2 class="h2">Design Patterns</h2>
+                        <p class="body-text">We heavily employ composable architectures and dependency injection to ensure our code remains highly testable and loosely coupled.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="code-review" class="content-section">
+                        <h2 class="h2">Review Protocol</h2>
+                        <p class="body-text">Every PR requires at least two approvals. The focus should be on business logic accuracy and architectural consistency rather than syntax formatting.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+
+            <!-- GUIDE TAB -->
+            <div id="content-guide" class="tab-pane split-layout" style="display: none;">
+                <aside class="sidebar-nav">
+                    <span class="label sidebar-title">Scroll to:</span>
+                    <ul class="scroll-menu">
+                        <li><a href="#guide-handover" class="scroll-link active">Tech Handover</a></li>
+                        <li><a href="#guide-manuals" class="scroll-link">User Manuals</a></li>
+                        <li><a href="#guide-api" class="scroll-link">API Docs</a></li>
+                    </ul>
+                </aside>
+                <div class="content-panel">
+                    <section id="guide-handover" class="content-section">
+                        <h2 class="h2">Tech Handover</h2>
+                        <p class="body-text">The transition from Dev to Ops requires a structured runbook detailing failure states, alerting mechanisms, and emergency rollback procedures.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="guide-manuals" class="content-section">
+                        <h2 class="h2">User Manuals</h2>
+                        <p class="body-text">Non-technical stakeholder documentation is maintained in plain language. We utilize annotated videos and step-by-step guides.</p>
+                        <br><br><br><br><br><br>
+                    </section>
+                    <section id="guide-api" class="content-section">
+                        <h2 class="h2">API Docs</h2>
+                        <p class="body-text">All internal and external APIs are self-documenting via Swagger/OpenAPI. Deprecation notices must be issued 3 months in advance.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Layout (Hidden by default) -->
+        <div id="process-content" class="content-panel" style="display: none; padding-top: 40px;">
+            <p class="body-text">Awaiting Process design.</p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <span class="label">© 2026 PS HOW Hub</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
