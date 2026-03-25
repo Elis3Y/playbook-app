@@ -43,10 +43,96 @@
         </div>
 
         <!-- Content Area -->
-        <div class="content-panel" style="padding-top: 40px;">
-            <p class="body-text">Awaiting Process design.</p>
+        <div id="process1-content" class="tab-content active">
+            <div class="diagram-container">
+                <!-- Step 1 -->
+                <div class="diagram-step">
+                    <div class="step-circle hugged" data-modal="step1">1</div>
+                    <span class="label step-label">Prepare the Ground</span>
+                    <ol class="substep-list">
+                        <li class="substep-item" data-modal="sub1_1">Agree on a simple starting approach</li>
+                        <li class="substep-item" data-modal="sub1_2">Decide a basic way of collaborating</li>
+                        <li class="substep-item" data-modal="sub1_3">Make sure essential tools are available</li>
+                        <li class="substep-item" data-modal="sub1_4">Set clear coordination and decision rules</li>
+                    </ol>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="diagram-step">
+                    <div class="step-circle" data-modal="step2">2</div>
+                    <span class="label step-label">Align the Group and Start</span>
+                    <ol class="substep-list">
+                        <li class="substep-item" data-modal="sub2_1">Welcome participants and manage transitions</li>
+                        <li class="substep-item" data-modal="sub2_2">Clarify ownership and responsibilities</li>
+                        <li class="substep-item" data-modal="sub2_3">Arrange practical working details</li>
+                        <li class="substep-item" data-modal="sub2_4">Define a few shared working values</li>
+                        <li class="substep-item" data-modal="sub2_5">Create a light structure for alignment</li>
+                        <li class="substep-item" data-modal="sub2_6">Run an official start session</li>
+                    </ol>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="diagram-step">
+                    <div class="step-circle hugged" data-modal="step3">3</div>
+                    <span class="label step-label">Need for Change and Areas to Improve</span>
+                    <ol class="substep-list">
+                        <li class="substep-item" data-modal="sub3_1">Review how things currently function</li>
+                        <li class="substep-item" data-modal="sub3_2">Highlight gaps, risks, and improvement areas</li>
+                    </ol>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="diagram-step">
+                    <div class="step-circle" data-modal="step4">4</div>
+                    <span class="label step-label">Set a Clear Direction and Intent</span>
+                    <ol class="substep-list">
+                        <li class="substep-item" data-modal="sub4_1">Define a simple future focus</li>
+                        <li class="substep-item" data-modal="sub4_2">Identify potential opportunities</li>
+                        <li class="substep-item" data-modal="sub4_3">Outline a high-level plan to move forward</li>
+                    </ol>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="diagram-step">
+                    <div class="step-circle hugged" data-modal="step5">5</div>
+                    <span class="label step-label">Show the Path Forward</span>
+                    <ol class="substep-list">
+                        <li class="substep-item" data-modal="sub5_1">Compare and prioritize options</li>
+                        <li class="substep-item" data-modal="sub5_2">Create a basic sequence of next steps</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div id="process2-content" class="tab-content" style="display: none;">
+            <p class="body-text">Awaiting Process 2 design.</p>
+        </div>
+
+        <div id="process3-content" class="tab-content" style="display: none;">
+            <p class="body-text">Awaiting Process 3 design.</p>
         </div>
     </main>
+
+    <!-- Modal Structure -->
+    <div id="info-modal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-content-area">
+                <header class="modal-header">
+                    <span class="label modal-category" id="modal-category">Phase Step</span>
+                    <h2 class="h2" id="modal-title">Step Title</h2>
+                </header>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="app-footer">
         <div class="footer-container">

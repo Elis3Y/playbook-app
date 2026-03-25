@@ -488,3 +488,254 @@ body {
     margin-bottom: 40px;
   }
 }
+
+/* --- Interactive Diagrams & Modals --- */
+.diagram-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px 0;
+  overflow-x: auto;
+  align-items: flex-start;
+  min-height: 400px;
+  scrollbar-width: thin;
+}
+
+.diagram-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 250px;
+  flex: 1;
+}
+
+.step-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-circle:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.step-circle.hugged {
+  box-shadow: 0 0 0 4px var(--color-white), 0 0 0 8px var(--color-primary);
+}
+
+/* Connectors (Simple horizontal line between steps) */
+.diagram-step:not(:last-child) .step-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-light-gray);
+  z-index: -1;
+}
+
+.step-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 24px;
+  padding: 0 10px;
+  min-height: 48px;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.substep-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  counter-reset: substep;
+}
+
+.substep-item {
+  color: var(--color-dark-gray);
+  font-size: 14px;
+  padding: 12px 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-left: 36px;
+}
+
+.substep-item::before {
+  content: counter(substep) ".";
+  position: absolute;
+  left: 12px;
+  color: var(--color-primary);
+  font-weight: bold;
+  counter-increment: substep;
+}
+
+.substep-item:hover {
+  border-color: var(--color-primary);
+  color: var(--color-black);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none; /* Controlled by JS */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.modal-container {
+  background-color: var(--color-white);
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1001;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  animation: modalScale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark-gray);
+  transition: color 0.2s ease;
+  z-index: 1002;
+}
+
+.modal-close:hover {
+  color: var(--color-primary);
+}
+
+.modal-content-area {
+  padding: 48px;
+}
+
+.modal-category {
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.modal-header .h2 {
+  margin-bottom: 24px;
+}
+
+.modal-body {
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+}
+
+.modal-section {
+  margin-top: 32px;
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: 24px;
+}
+
+.modal-section-title {
+  display: block;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-list li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.modal-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* Responsiveness for Diagram */
+@media (max-width: 992px) {
+  .diagram-container {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .diagram-step {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .diagram-step:not(:last-child) .step-circle::after {
+    left: 50%;
+    top: 100%;
+    width: 2px;
+    height: 40px;
+    transform: translateX(-50%);
+  }
+
+  .modal-content-area {
+    padding: 32px 24px;
+  }
+}
